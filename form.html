@@ -1,88 +1,247 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-</style>
+    <title>Page Title</title>
+
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .top_menu {
+            background: blue;
+            margin-top: 2px;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .top_menu_text {
+            color: white;
+            padding: 2px 10px 2px 10px;
+        }
+
+        .clickable:hover {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
 </head>
 <body>
-<h2> test page </h2>
-<table style="border:1px">
-<tr>
-<td>Entity</td>
-<td>Quantity</td>
-<td>Security</td>
-<td>Amount</td>
-<td>Account</td>
-<td>CLH#</td>
-<td>Trailer1</td>
-</tr>
 
-<tr>
-<td><input name="/test/EntryType" class ="cInput" id="EntryType" /></td>
-<td><input name="/test/Quantity" class ="cInput" id="Quantity" /></td>
-<td><input name="/test/Security" class ="cInput" id="Security" /></td>
-<td><input name="/test/Amount" class ="cInput" id="Amount" /></td>
-<td><input name="/test/Account" class ="cInput" id="Account" /></td>
-<td><input name="/test/CLH#" class ="cInput" id="CLH#" /></td>
-<td><input name="/test/Trailer1" class ="cInput" id="Trailer1" /></td>
-</tr>
 
-<tr>
-<td><input name="/test/EntryType" class ="cInput" id="EntryType" /></td>
-<td><input name="/test/Quantity" class ="cInput" id="Quantity" /></td>
-<td><input name="/test/Security" class ="cInput" id="Security" /></td>
-<td><input name="/test/Amount" class ="cInput" id="Amount" /></td>
-<td><input name="/test/Account" class ="cInput" id="Account" /></td>
-<td><input name="/test/CLH#" class ="cInput" id="CLH#" /></td>
-<td><input name="/test/Trailer1" class ="cInput" id="Trailer1" /></td>
-</tr>
+<div class="container-fluid">
+    <h2> Test</h2>
+    <div id="cage_toolbar" class="top_menu">
+        <span id="cage_id" class="top_menu_text clickable">Cage</span>
+        <span class="top_menu_text">BPS Connect</span>
+        <span class="top_menu_text">BPS Web</span>
+        <span class="top_menu_text">Seiba</span>
 
-<tr>
-<td><input name="/test/EntryType" class ="cInput" id="EntryType" /></td>
-<td><input name="/test/Quantity" class ="cInput" id="Quantity" /></td>
-<td><input name="/test/Security" class ="cInput" id="Security" /></td>
-<td><input name="/test/Amount" class ="cInput" id="Amount" /></td>
-<td><input name="/test/Account" class ="cInput" id="Account" /></td>
-<td><input name="/test/CLH#" class ="cInput" id="CLH#" /></td>
-<td><input name="/test/Trailer1" class ="cInput" id="Trailer1" /></td>
-</tr>
+    </div>
+     <div id="book_keeping_tool_bar" class="top_menu">
+        <span id="book_keeping_id" class="top_menu_text clickable">Bookkeeping</span>
+         <span class="top_menu_text">Inquiry</span>
+         <span class="top_menu_text">OW Summary</span>
+         <span class="top_menu_text">RD Master</span>
+         <span class="top_menu_text">RD Setup</span>
+    </div>
 
-<tr>
-<td><input name="/test/EntryType" class ="cInput" id="EntryType" /></td>
-<td><input name="/test/Quantity" class ="cInput" id="Quantity" /></td>
-<td><input name="/test/Security" class ="cInput" id="Security" /></td>
-<td><input name="/test/Amount" class ="cInput" id="Amount" /></td>
-<td><input name="/test/Account" class ="cInput" id="Account" /></td>
-<td><input name="/test/CLH#" class ="cInput" id="CLH#" /></td>
-<td><input name="/test/Trailer1" class ="cInput" id="Trailer1" /></td>
-</tr>
+    <div id="entry_tool_bar" class="top_menu">
+        <span id="entry_id" class="top_menu_text clickable">Enter New</span>
+        <span  class="top_menu_text clickable">Retrieve Old</span>
+    </div>
 
-<tr>
-<td><input name="/test/EntryType" class ="cInput" id="EntryType" /></td>
-<td><input name="/test/Quantity" class ="cInput" id="Quantity" /></td>
-<td><input name="/test/Security" class ="cInput" id="Security" /></td>
-<td><input name="/test/Amount" class ="cInput" id="Amount" /></td>
-<td><input name="/test/Account" class ="cInput" id="Account" /></td>
-<td><input name="/test/CLH#" class ="cInput" id="CLH#" /></td>
-<td><input name="/test/Trailer1" class ="cInput" id="Trailer1" /></td>
-</tr>
+    <div id="small_details_form">
+        <br>
+        <br>
+        <table style="border:1px" class="table">
+            <tr>
+                <td>BatchCode*</td>
+                <td>Mode*</td>
+                <td>SubMode*</td>
+                <td>DTC*</td>
 
-<tr>
-<td><input name="/test/EntryType" class ="cInput" id="EntryType" /></td>
-<td><input name="/test/Quantity" class ="cInput" id="Quantity" /></td>
-<td><input name="/test/Security" class ="cInput" id="Security" /></td>
-<td><input name="/test/Amount" class ="cInput" id="Amount" /></td>
-<td><input name="/test/Account" class ="cInput" id="Account" /></td>
-<td><input name="/test/CLH#" class ="cInput" id="CLH#" /></td>
-<td><input name="/test/Trailer1" class ="cInput" id="Trailer1" /></td>
-</tr>
 
-</table>
+            </tr>
+            <tr>
+                <td><input name="/test/BatchCode" class="cInput" id="BatchCode"/></td>
+                <td><input name="/test/BatchCode" class="cInput" id="Mode"/></td>
+                <td><input name="/test/BatchCode" class="cInput" id="SubMode"/></td>
+
+                <td>
+                    <select name="/test/Dtc" id ="Dtc">
+                        <option value ="N" selected="">N</option>
+                        <option value ="Y">Y</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <td align="center">
+<!--                    <span id="small_details_form_save" class="clickable"> Save </span>-->
+                    <input id="small_details_form_save" type="submit" value="Save" class="clickable">
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    <div id="main_form">
+        <br>
+        <br>
+        <table style="border:1px">
+            <tr>
+                <td>Entity</td>
+                <td>Quantity</td>
+                <td>Security</td>
+                <td>Amount</td>
+                <td>Account</td>
+                <td>CLH#</td>
+                <td>Trailer1</td>
+            </tr>
+
+            <tr>
+                <td><input name="/test/EntryType" class="cInput" id="EntryType"/></td>
+                <td><input name="/test/Quantity" class="cInput" id="Quantity"/></td>
+                <td><input name="/test/Security" class="cInput" id="Security"/></td>
+                <td><input name="/test/Amount" class="cInput" id="Amount"/></td>
+                <td><input name="/test/Account" class="cInput" id="Account"/></td>
+                <td><input name="/test/CLH#" class="cInput" id="CLH#"/></td>
+                <td><input name="/test/Trailer1" class="cInput" id="Trailer1"/></td>
+            </tr>
+
+            <tr>
+                <td><input name="/test/EntryType" class="cInput" id="EntryType"/></td>
+                <td><input name="/test/Quantity" class="cInput" id="Quantity"/></td>
+                <td><input name="/test/Security" class="cInput" id="Security"/></td>
+                <td><input name="/test/Amount" class="cInput" id="Amount"/></td>
+                <td><input name="/test/Account" class="cInput" id="Account"/></td>
+                <td><input name="/test/CLH#" class="cInput" id="CLH#"/></td>
+                <td><input name="/test/Trailer1" class="cInput" id="Trailer1"/></td>
+            </tr>
+
+            <tr>
+                <td><input name="/test/EntryType" class="cInput" id="EntryType"/></td>
+                <td><input name="/test/Quantity" class="cInput" id="Quantity"/></td>
+                <td><input name="/test/Security" class="cInput" id="Security"/></td>
+                <td><input name="/test/Amount" class="cInput" id="Amount"/></td>
+                <td><input name="/test/Account" class="cInput" id="Account"/></td>
+                <td><input name="/test/CLH#" class="cInput" id="CLH#"/></td>
+                <td><input name="/test/Trailer1" class="cInput" id="Trailer1"/></td>
+            </tr>
+
+            <tr>
+                <td><input name="/test/EntryType" class="cInput" id="EntryType"/></td>
+                <td><input name="/test/Quantity" class="cInput" id="Quantity"/></td>
+                <td><input name="/test/Security" class="cInput" id="Security"/></td>
+                <td><input name="/test/Amount" class="cInput" id="Amount"/></td>
+                <td><input name="/test/Account" class="cInput" id="Account"/></td>
+                <td><input name="/test/CLH#" class="cInput" id="CLH#"/></td>
+                <td><input name="/test/Trailer1" class="cInput" id="Trailer1"/></td>
+            </tr>
+
+            <tr>
+                <td><input name="/test/EntryType" class="cInput" id="EntryType"/></td>
+                <td><input name="/test/Quantity" class="cInput" id="Quantity"/></td>
+                <td><input name="/test/Security" class="cInput" id="Security"/></td>
+                <td><input name="/test/Amount" class="cInput" id="Amount"/></td>
+                <td><input name="/test/Account" class="cInput" id="Account"/></td>
+                <td><input name="/test/CLH#" class="cInput" id="CLH#"/></td>
+                <td><input name="/test/Trailer1" class="cInput" id="Trailer1"/></td>
+            </tr>
+
+            <tr>
+                <td><input name="/test/EntryType" class="cInput" id="EntryType"/></td>
+                <td><input name="/test/Quantity" class="cInput" id="Quantity"/></td>
+                <td><input name="/test/Security" class="cInput" id="Security"/></td>
+                <td><input name="/test/Amount" class="cInput" id="Amount"/></td>
+                <td><input name="/test/Account" class="cInput" id="Account"/></td>
+                <td><input name="/test/CLH#" class="cInput" id="CLH#"/></td>
+                <td><input name="/test/Trailer1" class="cInput" id="Trailer1"/></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <script>
+        $("#cage_id").click(function () {
+            changeToState("cage_clicked")
+        });
+        $("#book_keeping_id").click(function () {
+            changeToState("bookeeping_clicked")
+        });
+
+        $("#entry_id").click(function () {
+            changeToState("entry_id_clicked")
+        });
+
+         $("#small_details_form_save").click(function () {
+            changeToState("small_details_form_save_clicked")
+        });
+
+        function changeToState(state) {
+            switch (state) {
+                case  "first_state":
+                    // $("#cage_toolbar").hide();
+                    // $("#entry_tool_bar").hide();
+                    // $("#small_details_form").hide();
+                    // $("#main_form").hide();
+                    $("#cage_toolbar").show();
+                    $("#book_keeping_tool_bar").hide();
+                    $("#entry_tool_bar").hide();
+                    $("#small_details_form").hide();
+                    $("#main_form").hide();
+                    break;
+                case "cage_clicked":
+                    $("#cage_toolbar").show();
+                    $("#book_keeping_tool_bar").show();
+                    $("#entry_tool_bar").hide();
+                    $("#small_details_form").hide();
+                    $("#main_form").hide();
+                    break;
+                case "bookeeping_clicked":
+                    $("#cage_toolbar").show();
+                    $("#book_keeping_tool_bar").show();
+                    $("#book_keeping_tool_bar").show();
+                    $("#entry_tool_bar").show();
+                    $("#small_details_form").hide();
+                    $("#main_form").hide();
+                    break;
+
+                case "entry_id_clicked":
+                    $("#cage_toolbar").show();
+                    $("#book_keeping_tool_bar").show();
+                    $("#entry_tool_bar").show();
+                    $("#small_details_form").show();
+                    $("#main_form").hide();
+                    break;
+
+                case "small_details_form_save_clicked":
+                    $("#cage_toolbar").show();
+                    $("#book_keeping_tool_bar").show();
+                    $("#entry_tool_bar").show();
+                    $("#small_details_form").hide();
+                    $("#main_form").show();
+                    break;
+            }
+        }
+
+        $(document).ready(function () {
+            console.log("ready!");
+            changeToState("first_state")
+        });
+    </script>
+</div>
 
 
 </body>
